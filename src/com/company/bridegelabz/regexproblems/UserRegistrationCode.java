@@ -17,6 +17,7 @@ public class UserRegistrationCode
         System.out.println("Welcome to User Registration Programme");
         String firstName="Shruti";
         System.out.println(isMatchesFirstName(firstName));
-
+        String lastName="Shruti";
+        System.out.println(isMatchesFirstName(lastName));
     }
 }
