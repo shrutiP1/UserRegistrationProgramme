@@ -26,6 +26,13 @@ public class UserRegistrationCode
         Matcher M= P.matcher(number);
         return M.matches();
     }
+    public static boolean isMatches(String text)
+    {
+        String regex="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_+=-])(?=.{8,}).*$";
+        Pattern p=Pattern.compile(regex);
+        Matcher m= p.matcher(text);
+        return m.matches();
+    }
     public static void main(String[] args)
     {
         System.out.println("Welcome to User Registration Programme");
@@ -37,5 +44,7 @@ public class UserRegistrationCode
         System.out.println(isMatchesEmail(email));
         String mobileNo="91 9130416631";
         System.out.println(isMatchesNo(mobileNo));
+        String s="Shruti@123";
+        System.out.println(isMatches(s));
     }
 }
