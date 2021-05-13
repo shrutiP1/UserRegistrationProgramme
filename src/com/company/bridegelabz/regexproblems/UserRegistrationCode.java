@@ -19,6 +19,13 @@ public class UserRegistrationCode
         Matcher m= p.matcher(text);
         return m.matches();
     }
+    public static boolean isMatchesNo(String number)
+    {
+        String regex="^([0-9]{2}[: :][0-9]{10})$";
+        Pattern P=Pattern.compile(regex);
+        Matcher M= P.matcher(number);
+        return M.matches();
+    }
     public static void main(String[] args)
     {
         System.out.println("Welcome to User Registration Programme");
@@ -28,5 +35,7 @@ public class UserRegistrationCode
         System.out.println(isMatchesFirstName(lastName));
         String email="shruti.xyz@bri.com.in";
         System.out.println(isMatchesEmail(email));
+        String mobileNo="91 9130416631";
+        System.out.println(isMatchesNo(mobileNo));
     }
 }
